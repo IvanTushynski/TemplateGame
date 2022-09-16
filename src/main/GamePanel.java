@@ -10,8 +10,8 @@ public class GamePanel extends JPanel implements Runnable{
 
     final int tileSize = originalTileSize * scale;
 
-    final int maxScreenColl = 20;
-    final int maxScreenRoll = 12;
+    final int maxScreenColl = 24;
+    final int maxScreenRoll = 14;
 
     final int screenWidth = tileSize * maxScreenColl; //768px
     final int screenHeight = tileSize * maxScreenRoll; //576px
@@ -24,7 +24,7 @@ public class GamePanel extends JPanel implements Runnable{
     //set default player position
     int playerX = 100;
     int playerY = 100;
-    int playerSpeed = 4;
+    int playerSpeed = 6;
 
     public GamePanel() {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
@@ -77,7 +77,7 @@ public class GamePanel extends JPanel implements Runnable{
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D)g;
         g2.setColor(new java.awt.Color(200, 200, 200));
-        g2.fillRect(playerX, playerY, tileSize, tileSize);
+        g2.fillRect(playerX, playerY, tileSize/2, tileSize/2);
         g2.dispose();
     }
 
