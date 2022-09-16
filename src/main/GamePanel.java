@@ -34,7 +34,7 @@ public class GamePanel extends JPanel implements Runnable{
 
     public GamePanel() throws IOException {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
-        this.setBackground(new java.awt.Color(32, 32, 32));
+        this.setBackground(new java.awt.Color(122, 102, 102));
         this.setDoubleBuffered(true);
         this.addKeyListener(keyH);
         this.setFocusable(true);
